@@ -1,0 +1,32 @@
+<p>show-details works!</p>
+<!-- <div *ngFor="let op of em">{{op.EmployeeName}}</div> -->
+<!--  -->
+
+
+
+  <table class="table">
+  <thead>
+    <tr>
+     
+      <th scope="col">Name</th>
+      
+      
+      
+      <th scope="col">Total Time</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employeeList">
+      
+      <td *ngIf="employee.totalTimeInHr!<100" [ngStyle]="{  'background-color': 'red'}">{{ employee.employeeName }}</td>
+      <td *ngIf="employee.totalTimeInHr!<100" [ngStyle]="{  'background-color': 'red'}">{{ employee.totalTimeInHr}}hrs {{ employee.totalTimeInMin}}min </td>
+     
+      <!-- <td>{{ employee.S| date: 'HH \'hrs\' mm \'min\ '}}</td> -->
+      
+      
+
+    </tr>
+  </tbody>
+</table>
